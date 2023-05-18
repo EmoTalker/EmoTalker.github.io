@@ -158,19 +158,19 @@
                         previous approaches have used reference frames or extra labels to control emotions and facial
                         expressions, which disentangle utterance and expression and ignore the impact of audio
                         fluctuations on face motions, e.g., head pose, facial expressions and emotions.
-                        In this work, we present <strong>EmoTalker</strong>, which generates arbitrary identities with
-                        diverse and natural facial expressions from audio, without relying on driving frames or emotion
-                        labels as input.
+                        In this work, we present <strong>EmoTalker</strong>, which generates arbitrary identities with diverse
+                        and natural facial expressions from audio, without relying on driving frames or emotion labels
+                        as input.
                         To achieve this, we present frames as a sequence of 3D motion coefficients of 3DMM
                         representation and separate them into lip-related coefficients and the remaining (head pose,
-                        expressions) as facial motion. To model lip movement, we start from a pretrained audio encoder
-                        and map it to lip representation. While for facial motions, we employ a two-stage training
-                        strategy: 1) We project facial motions into a finite space of the codebook embedded with
-                        emotion-aware facial expression priors. 2) Moreover, a cross-modal Transformer is devised to
-                        explicitly model the correlations between audio and different types of facial motions.
-                        Experimental results and user studies show our model achieves state-of-the-art performance on
-                        the emotional audio-visual dataset and produces more realistic talking head videos with
-                        synchronized lip movement and vivid facial expressions.
+                        expressions) as facial motions. To model lip movement, we start from a pre-trained audio encoder
+                        and map it to corresponding lip representation. While for facial motions, we employ a two-stage
+                        training strategy: 1) We first project facial motions into a finite space of the codebook
+                        embedded with emotion-aware facial expression priors. 2) Moreover, a cross-modal Transformer is
+                        devised to explicitly model the correlations between audio and different types of facial
+                        motions. Experimental results and user studies show our model achieves state-of-the-art
+                        performance on the emotional audio-visual dataset and produces more realistic talking head
+                        videos with synchronized lip movement and vivid facial expressions.
                     </p>
                 </div>
             </div>
@@ -449,42 +449,80 @@
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
             <h2 class="title is-3">Diverse Emotion Aware Videos</h2>
-            <h4 class="title is-5">Same speech content with different fluctuations</h4>
+            <h4 class="title is-5">Neutral identity reference with same speech identity but different audio
+                fluctuations</h4>
             <div style="text-align: center;">
                 <table align="center">
                     <tr>
                         <td>
                             <img src="https://emotalker.s3.amazonaws.com/webpage/neutral/M003.jpg" width="190"
                                  alt="Image Description">
-                            <p>Identity Reference</p>
                         </td>
                         <td>
                             <video preload="auto"
-                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/M003-angry-level_1-030.mp4"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/sadtalker/M003-angry-level_1-030.mp4"
                                    type="video/mp4" controls="" width="190"></video>
                         </td>
                         <td>
                             <video preload="auto"
-                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/M003-contempt-level_2-029.mp4"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/sadtalker/M003-contempt-level_2-029.mp4"
                                    type="video/mp4" controls="" width="190"></video>
                         </td>
                         <td>
                             <video preload="auto"
-                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/M003-fear-level_1-030.mp4"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/sadtalker/M003-fear-level_1-030.mp4"
                                    type="video/mp4" controls="" width="190"></video>
                         </td>
                         <td>
                             <video preload="auto"
-                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/M003-happy-level_2-030.mp4"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/sadtalker/M003-happy-level_2-030.mp4"
                                    type="video/mp4" controls="" width="190"></video>
                         </td>
                         <td>
                             <video preload="auto"
-                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/M003-sad-level_3-030.mp4"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/sadtalker/M003-sad-level_3-030.mp4"
                                    type="video/mp4" controls="" width="190"></video>
                         </td>
                     </tr>
                 </table>
+                <h3 class="title is-5">SadTalker</h3>
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <table align="center">
+                    <tr>
+                        <td>
+                            <img src="https://emotalker.s3.amazonaws.com/webpage/neutral/M003.jpg" width="190"
+                                 alt="Image Description">
+                        </td>
+                        <td>
+                            <video preload="auto"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/emotalker/M003-angry-level_1-030.mp4"
+                                   type="video/mp4" controls="" width="190"></video>
+                        </td>
+                        <td>
+                            <video preload="auto"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/emotalker/M003-contempt-level_2-029.mp4"
+                                   type="video/mp4" controls="" width="190"></video>
+                        </td>
+                        <td>
+                            <video preload="auto"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/emotalker/M003-fear-level_1-030.mp4"
+                                   type="video/mp4" controls="" width="190"></video>
+                        </td>
+                        <td>
+                            <video preload="auto"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/emotalker/M003-happy-level_2-030.mp4"
+                                   type="video/mp4" controls="" width="190"></video>
+                        </td>
+                        <td>
+                            <video preload="auto"
+                                   src="https://emotalker.s3.amazonaws.com/webpage/same-content/emotalker/M003-sad-level_3-030.mp4"
+                                   type="video/mp4" controls="" width="190"></video>
+                        </td>
+                    </tr>
+                </table>
+                <h3 class="title is-5">EmoTalker (ours)</h3>
             </div>
 
 
